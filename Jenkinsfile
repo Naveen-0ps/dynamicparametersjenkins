@@ -3,7 +3,7 @@ pipeline {
     parameters{
         string 'JDK_VERSION'
         choice choices :['Dev','test','prod','stage'], name: 'Build_Environment' 
-        passward name: 'DB_Passward', defaultvalue:'welcome@1', description: 'defaultpassward'
+        password name: 'DB_Passward', defaultvalue:'welcome@9', description: 'defaultpassward'
         test name: 'DESC'
         booleanParm name: 'Deploy', description: 'Do whant to  deploy code on target env'
     }
