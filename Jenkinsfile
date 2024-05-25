@@ -3,11 +3,10 @@ pipeline {
     parameters{
         string 'JDK_VERSION'
         choice choices :['Dev','test','prod','stage'], name: 'Build_Environment' 
-        password name: 'DB_Passward', defaultvalue: 'welcome@9', description: 'defaultpassward'
+        password name: 'DB_Passward', defaultValue: 'welcome@9', description: 'defaultpassward'
         text name: 'DESC'
         booleanParm name: 'Deploy', description: 'Do whant to  deploy code on target env'
     }
-
     stages {
         stage('printparameters') {
             steps {
