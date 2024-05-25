@@ -5,7 +5,7 @@ pipeline {
         choice choices :['Dev','test','prod','stage'], name: 'Build_Environment' 
         password name: 'DB_Passward', defaultValue: 'welcome@9', description: 'defaultpassward'
         text name: 'DESC'
-        booleanParm name: 'Deploy', description: 'Do whant to  deploy code on target env'
+        booleanParam name: 'Deploy', description: 'Do whant to  deploy code on target env'
     }
     stages {
         stage('printparameters') {
